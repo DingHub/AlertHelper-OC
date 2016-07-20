@@ -13,10 +13,10 @@
 		841219781D3F0A9B00069CE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841219761D3F0A9B00069CE1 /* Main.storyboard */; };
 		8412197A1D3F0A9B00069CE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841219791D3F0A9B00069CE1 /* Assets.xcassets */; };
 		8412197D1D3F0A9B00069CE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8412197B1D3F0A9B00069CE1 /* LaunchScreen.storyboard */; };
-		8412198D1D3F0ACF00069CE1 /* AlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 841219861D3F0ACF00069CE1 /* AlertHelper.m */; };
-		8412198E1D3F0ACF00069CE1 /* UIActionSheet+block.m in Sources */ = {isa = PBXBuildFile; fileRef = 841219881D3F0ACF00069CE1 /* UIActionSheet+block.m */; };
-		8412198F1D3F0ACF00069CE1 /* UIAlertController+block.m in Sources */ = {isa = PBXBuildFile; fileRef = 8412198A1D3F0ACF00069CE1 /* UIAlertController+block.m */; };
-		841219901D3F0ACF00069CE1 /* UIAlertView+block.m in Sources */ = {isa = PBXBuildFile; fileRef = 8412198C1D3F0ACF00069CE1 /* UIAlertView+block.m */; };
+		844C5C551D3F57240059A8E4 /* AlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 844C5C4E1D3F57240059A8E4 /* AlertHelper.m */; };
+		844C5C561D3F57240059A8E4 /* UIActionSheet+block.m in Sources */ = {isa = PBXBuildFile; fileRef = 844C5C501D3F57240059A8E4 /* UIActionSheet+block.m */; };
+		844C5C571D3F57240059A8E4 /* UIAlertController+block.m in Sources */ = {isa = PBXBuildFile; fileRef = 844C5C521D3F57240059A8E4 /* UIAlertController+block.m */; };
+		844C5C581D3F57240059A8E4 /* UIAlertView+block.m in Sources */ = {isa = PBXBuildFile; fileRef = 844C5C541D3F57240059A8E4 /* UIAlertView+block.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,14 +30,14 @@
 		841219791D3F0A9B00069CE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8412197C1D3F0A9B00069CE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8412197E1D3F0A9B00069CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		841219851D3F0ACF00069CE1 /* AlertHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertHelper.h; sourceTree = "<group>"; };
-		841219861D3F0ACF00069CE1 /* AlertHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertHelper.m; sourceTree = "<group>"; };
-		841219871D3F0ACF00069CE1 /* UIActionSheet+block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+block.h"; sourceTree = "<group>"; };
-		841219881D3F0ACF00069CE1 /* UIActionSheet+block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+block.m"; sourceTree = "<group>"; };
-		841219891D3F0ACF00069CE1 /* UIAlertController+block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+block.h"; sourceTree = "<group>"; };
-		8412198A1D3F0ACF00069CE1 /* UIAlertController+block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+block.m"; sourceTree = "<group>"; };
-		8412198B1D3F0ACF00069CE1 /* UIAlertView+block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+block.h"; sourceTree = "<group>"; };
-		8412198C1D3F0ACF00069CE1 /* UIAlertView+block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+block.m"; sourceTree = "<group>"; };
+		844C5C4D1D3F57240059A8E4 /* AlertHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertHelper.h; sourceTree = "<group>"; };
+		844C5C4E1D3F57240059A8E4 /* AlertHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertHelper.m; sourceTree = "<group>"; };
+		844C5C4F1D3F57240059A8E4 /* UIActionSheet+block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+block.h"; sourceTree = "<group>"; };
+		844C5C501D3F57240059A8E4 /* UIActionSheet+block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+block.m"; sourceTree = "<group>"; };
+		844C5C511D3F57240059A8E4 /* UIAlertController+block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+block.h"; sourceTree = "<group>"; };
+		844C5C521D3F57240059A8E4 /* UIAlertController+block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+block.m"; sourceTree = "<group>"; };
+		844C5C531D3F57240059A8E4 /* UIAlertView+block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+block.h"; sourceTree = "<group>"; };
+		844C5C541D3F57240059A8E4 /* UIAlertView+block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+block.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 		841219611D3F0A9B00069CE1 = {
 			isa = PBXGroup;
 			children = (
-				841219841D3F0ACF00069CE1 /* Alert */,
+				844C5C4C1D3F57240059A8E4 /* Alert */,
 				8412196C1D3F0A9B00069CE1 /* AlertHelper */,
 				8412196B1D3F0A9B00069CE1 /* Products */,
 			);
@@ -92,17 +92,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		841219841D3F0ACF00069CE1 /* Alert */ = {
+		844C5C4C1D3F57240059A8E4 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
-				841219851D3F0ACF00069CE1 /* AlertHelper.h */,
-				841219861D3F0ACF00069CE1 /* AlertHelper.m */,
-				8412198B1D3F0ACF00069CE1 /* UIAlertView+block.h */,
-				8412198C1D3F0ACF00069CE1 /* UIAlertView+block.m */,
-				841219871D3F0ACF00069CE1 /* UIActionSheet+block.h */,
-				841219881D3F0ACF00069CE1 /* UIActionSheet+block.m */,
-				841219891D3F0ACF00069CE1 /* UIAlertController+block.h */,
-				8412198A1D3F0ACF00069CE1 /* UIAlertController+block.m */,
+				844C5C4D1D3F57240059A8E4 /* AlertHelper.h */,
+				844C5C4E1D3F57240059A8E4 /* AlertHelper.m */,
+				844C5C4F1D3F57240059A8E4 /* UIActionSheet+block.h */,
+				844C5C501D3F57240059A8E4 /* UIActionSheet+block.m */,
+				844C5C511D3F57240059A8E4 /* UIAlertController+block.h */,
+				844C5C521D3F57240059A8E4 /* UIAlertController+block.m */,
+				844C5C531D3F57240059A8E4 /* UIAlertView+block.h */,
+				844C5C541D3F57240059A8E4 /* UIAlertView+block.m */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -177,13 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8412198D1D3F0ACF00069CE1 /* AlertHelper.m in Sources */,
-				8412198E1D3F0ACF00069CE1 /* UIActionSheet+block.m in Sources */,
+				844C5C551D3F57240059A8E4 /* AlertHelper.m in Sources */,
+				844C5C561D3F57240059A8E4 /* UIActionSheet+block.m in Sources */,
 				841219751D3F0A9B00069CE1 /* ViewController.m in Sources */,
 				841219721D3F0A9B00069CE1 /* AppDelegate.m in Sources */,
-				8412198F1D3F0ACF00069CE1 /* UIAlertController+block.m in Sources */,
+				844C5C571D3F57240059A8E4 /* UIAlertController+block.m in Sources */,
 				8412196F1D3F0A9B00069CE1 /* main.m in Sources */,
-				841219901D3F0ACF00069CE1 /* UIAlertView+block.m in Sources */,
+				844C5C581D3F57240059A8E4 /* UIAlertView+block.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
