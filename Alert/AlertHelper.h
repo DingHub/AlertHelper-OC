@@ -38,7 +38,7 @@ typedef void (^AlertButtonTappedBlock)(NSInteger buttonIndex);
  *
  *  @param viewController
  *  @param title
- *  @param message
+ *  @param message          -if the system version < 8.0, this parameter will lose effictiveness
  *  @param destructiveTitle
  *  @param cancelTitle
  *  @param otherTitles

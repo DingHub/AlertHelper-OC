@@ -97,12 +97,12 @@
 			children = (
 				841219851D3F0ACF00069CE1 /* AlertHelper.h */,
 				841219861D3F0ACF00069CE1 /* AlertHelper.m */,
+				8412198B1D3F0ACF00069CE1 /* UIAlertView+block.h */,
+				8412198C1D3F0ACF00069CE1 /* UIAlertView+block.m */,
 				841219871D3F0ACF00069CE1 /* UIActionSheet+block.h */,
 				841219881D3F0ACF00069CE1 /* UIActionSheet+block.m */,
 				841219891D3F0ACF00069CE1 /* UIAlertController+block.h */,
 				8412198A1D3F0ACF00069CE1 /* UIAlertController+block.m */,
-				8412198B1D3F0ACF00069CE1 /* UIAlertView+block.h */,
-				8412198C1D3F0ACF00069CE1 /* UIAlertView+block.m */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -334,6 +334,7 @@
 				841219831D3F0A9B00069CE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
