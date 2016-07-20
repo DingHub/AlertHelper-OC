@@ -18,15 +18,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfg-O8-Kq6">
-                                <rect key="frame" x="215" y="285" width="170" height="30"/>
-                                <state key="normal" title="Show alert at the bottom"/>
+                                <rect key="frame" x="237" y="285" width="127" height="30"/>
+                                <state key="normal" title="Show action sheet"/>
                                 <connections>
                                     <action selector="showActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m40-9A-R6S"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kO-t5-eXi">
-                                <rect key="frame" x="219" y="247" width="163" height="30"/>
-                                <state key="normal" title="Show alert in the center"/>
+                                <rect key="frame" x="246" y="247" width="108" height="30"/>
+                                <state key="normal" title="Show alert view"/>
                                 <connections>
                                     <action selector="showAlertView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lX7-F4-IRs"/>
                                 </connections>
