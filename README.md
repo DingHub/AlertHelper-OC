@@ -23,5 +23,5 @@ useage
   
   We can also show an action sheet just almost like above.<br>
   <br>
-  You can also find a Swift version [here](https://github.com/DingHub/AlertHelper-Swift)
+  You can also find a Swift version [HERE.](https://github.com/DingHub/AlertHelper-Swift)
   
