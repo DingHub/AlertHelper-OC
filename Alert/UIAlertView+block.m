@@ -7,29 +7,8 @@
 //
 
 #import "UIAlertView+block.h"
-#import <objc/runtime.h>
-
-static const void *kAlertButtonTappedHandlerKey = "kAlertButtonTappedHandlerKey";
-@interface UIApplication (AlertView) <UIAlertViewDelegate>
-
-@end
-
-@implementation UIApplication (AlertView)
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (alertView.buttonTappedHandler) {
-        alertView.buttonTappedHandler(buttonIndex);
-    }
-}
-@end
 
 @implementation UIAlertView (block)
-
-- (AlertButtonTappedBlock)buttonTappedHandler {
-    return objc_getAssociatedObject(self, kAlertButtonTappedHandlerKey);
-}
-- (void)setButtonTappedHandler:(AlertButtonTappedBlock)buttonTappedHandler {
-    objc_setAssociatedObject(self, kAlertButtonTappedHandlerKey, buttonTappedHandler, OBJC_ASSOCIATION_COPY);
-}
 
 + (void)showWithTitle:(NSString *)title
               message:(NSString *)message
@@ -42,7 +21,7 @@ static const void *kAlertButtonTappedHandlerKey = "kAlertButtonTappedHandlerKey"
                                                        delegate:[UIApplication sharedApplication]
                                               cancelButtonTitle:cancelTitle
                                               otherButtonTitles:nil];
-    alertView.buttonTappedHandler = block;
+    [AlertHelper setButtonTappedHandler:block];
     for (NSString *title in otherTitles) {
         [alertView addButtonWithTitle:title];
     }

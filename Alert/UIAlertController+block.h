@@ -7,12 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef void (^AlertControlButtonTappedBlock)(NSInteger buttonIndex);
+#import "AlertHelper.h"
 
 @interface UIAlertController (block)
-
-@property (nonatomic, copy) AlertControlButtonTappedBlock buttonTappedHandler;
 
 /**
  *  @param block    -The index of buttons will ordered like : destructive button -> cancel button -> other buttons
@@ -24,6 +21,18 @@ typedef void (^AlertControlButtonTappedBlock)(NSInteger buttonIndex);
 destructiveButtonTitle:(NSString *)destructiveTitle
     cancelButtonTitle:(NSString *)cancelTitle
     otherButtonTitles:(NSArray<NSString *> *)otherTitles
-  buttonTappedHandler:(AlertControlButtonTappedBlock)block;
+  buttonTappedHandler:(AlertButtonTappedBlock)block;
+/**
+ *  @param block    -The index of buttons will ordered like : destructive button -> cancel button -> other buttons
+ */
++ (void)showWithStyle:(UIAlertControllerStyle)style
+    forViewController:(UIViewController *)viewController
+           sourceRect:(CGRect)rect
+                title:(NSString *)title
+              message:(NSString *)message
+destructiveButtonTitle:(NSString *)destructiveTitle
+    cancelButtonTitle:(NSString *)cancelTitle
+    otherButtonTitles:(NSArray<NSString *> *)otherTitles
+  buttonTappedHandler:(AlertButtonTappedBlock)block;
 
 @end

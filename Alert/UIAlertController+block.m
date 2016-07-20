@@ -7,17 +7,8 @@
 //
 
 #import "UIAlertController+block.h"
-#import <objc/runtime.h>
 
-static const void *kAlertControlButtonTappedHandlerKey = "kAlertControlButtonTappedHandlerKey";
 @implementation UIAlertController (block)
-
-- (AlertControlButtonTappedBlock)buttonTappedHandler {
-    return objc_getAssociatedObject(self, kAlertControlButtonTappedHandlerKey);
-}
-- (void)setButtonTappedHandler:(AlertControlButtonTappedBlock)buttonTappedHandler {
-    objc_setAssociatedObject(self, kAlertControlButtonTappedHandlerKey, buttonTappedHandler, OBJC_ASSOCIATION_COPY);
-}
 
 + (void)showWithStyle:(UIAlertControllerStyle)style
     forViewController:(UIViewController *)viewController
@@ -26,7 +17,21 @@ static const void *kAlertControlButtonTappedHandlerKey = "kAlertControlButtonTap
 destructiveButtonTitle:(NSString *)destructiveTitle
     cancelButtonTitle:(NSString *)cancelTitle
     otherButtonTitles:(NSArray<NSString *> *)otherTitles
-  buttonTappedHandler:(AlertControlButtonTappedBlock)block {
+  buttonTappedHandler:(AlertButtonTappedBlock)block {
+    
+    [self showWithStyle:style forViewController:viewController sourceRect:CGRectNull title:title message:message destructiveButtonTitle:destructiveTitle cancelButtonTitle:cancelTitle otherButtonTitles:otherTitles buttonTappedHandler:block];
+}
+
+
++ (void)showWithStyle:(UIAlertControllerStyle)style
+    forViewController:(UIViewController *)viewController
+           sourceRect:(CGRect)rect
+                title:(NSString *)title
+              message:(NSString *)message
+destructiveButtonTitle:(NSString *)destructiveTitle
+    cancelButtonTitle:(NSString *)cancelTitle
+    otherButtonTitles:(NSArray<NSString *> *)otherTitles
+  buttonTappedHandler:(AlertButtonTappedBlock)block {
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:style];
     if (destructiveTitle) {
         UIAlertAction *action = [UIAlertAction actionWithTitle:destructiveTitle style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
@@ -55,6 +60,10 @@ destructiveButtonTitle:(NSString *)destructiveTitle
         }];
         [controller addAction:action];
     }];
+    
+    UIPopoverPresentationController *popoverController = controller.popoverPresentationController;
+    popoverController.sourceView = viewController.view;
+    popoverController.sourceRect = CGRectIsNull(rect) ? CGRectMake(viewController.view.bounds.size.width/2, viewController.view.bounds.size.height - 2, 0, 2) : rect;
     [viewController presentViewController:controller animated:YES completion:nil];
 }
 @end

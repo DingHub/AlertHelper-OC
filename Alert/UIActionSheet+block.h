@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AlertHelper.h"
 
-typedef void (^ActionSheetButtonTappedBlock)(NSInteger buttonIndex);
 
 @interface UIActionSheet (block)
-
-@property (nonatomic, copy) ActionSheetButtonTappedBlock buttonTappedHandler;
 
 /**
  *  @param block    -The index of buttons will ordered like : destructive button -> cancel button -> other buttons
@@ -22,6 +20,6 @@ typedef void (^ActionSheetButtonTappedBlock)(NSInteger buttonIndex);
   destructiveTitle:(NSString *)destructiveTitle
  cancelButtonTitle:(NSString *)cancelTitle
  otherButtonTitles:(NSArray<NSString *> *)otherTitles
-buttonTappedHandler:(ActionSheetButtonTappedBlock)block;
+buttonTappedHandler:(AlertButtonTappedBlock)block;
 
 @end

@@ -7,12 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef void (^AlertButtonTappedBlock)(NSInteger buttonIndex);
+#import "AlertHelper.h"
 
 @interface UIAlertView (block)
-
-@property (nonatomic, copy) AlertButtonTappedBlock buttonTappedHandler;
 
 /**
  *  @param block    -The index of buttons will ordered like : cancel button -> other buttons
