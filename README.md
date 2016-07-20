@@ -21,4 +21,4 @@ useage
 
   ```
   
-  We can also show an action sheet just almost like avove.
+  We can also show an action sheet just almost like above.
