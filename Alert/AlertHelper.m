@@ -11,20 +11,25 @@
 static AlertButtonTappedBlock buttonTappedHandler;
 
 @implementation UIApplication (AlertView)
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonTappedHandler) {
         buttonTappedHandler(buttonIndex);
         buttonTappedHandler = nil;
     }
 }
+
 @end
+
 @implementation UIApplication (ActionSheet)
+
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonTappedHandler) {
         buttonTappedHandler(buttonIndex);
         buttonTappedHandler = nil;
     }
 }
+
 @end
 
 @implementation AlertHelper

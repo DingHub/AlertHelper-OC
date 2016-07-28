@@ -28,6 +28,7 @@ buttonTappedHandler:(AlertButtonTappedBlock)block {
         [actionSheet addButtonWithTitle:title];
     }
     [actionSheet showInView:view];
+    
 }
 
 @end
