@@ -6,20 +6,21 @@ If the system version < 8.0, we will use UIAlertView  or UIActionSheet, otherwis
 usage
 ---
 ```
-#import "AlertHelper.h"
+#import "UIViewController+BlockAlert.h"
 ```
 ```
-[AlertHelper showAlertViewForViewController:self
-                                            title:@"Title"
-                                          message:@"Message"
-                           destructiveButtonTitle:@"destructive"
-                                cancelButtonTitle:@"cancel"
-                                otherButtonTitles:@[@"boy",@"girl"]
-                              buttonTappedHandler:^(NSInteger buttonIndex) {
-                                  NSLog(@"%zd", buttonIndex);
-                              }];
-
-  ```
+- (IBAction)showAlertView:(id)sender {
+    
+    [self showAlertViewWithTitle:@"Title"
+                         message:@"Message"
+          destructiveButtonTitle:@"destructive"
+               cancelButtonTitle:@"cancel"
+               otherButtonTitles:@[@"boy",@"girl"]
+             buttonTappedHandler:^(NSInteger buttonIndex) {
+                 NSLog(@"%zd", buttonIndex);
+             }];
+}
+ ```
   
   We can also show an action sheet just almost like above.<br>
   <br>
