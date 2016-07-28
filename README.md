@@ -1,10 +1,10 @@
 # AlertHelper-OC
 
-A category of UIViewController to add handy methods to show alerts with button call back block.
-If the system version < 8.0, we will use UIAlertView or UIActionSheet, otherwise, UIAlertController.
+A category of UIViewController to add handy methods to show alerts with button call back block.<br>
+If the system version < 8.0, we will use UIAlertView or UIActionSheet, otherwise, UIAlertController.<br>
 
 Impletion :
-Categories of UIAlertView, UIActionSheet and UIAlertController to add block use, and a category of UIViewController to show alert.
+Categories of UIAlertView, UIActionSheet and UIAlertController to add block use, and a category of UIViewController to show alert.<br>
 
 usage
 ---
