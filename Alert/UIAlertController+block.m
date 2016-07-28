@@ -12,19 +12,6 @@
 
 + (void)showWithStyle:(UIAlertControllerStyle)style
     forViewController:(UIViewController *)viewController
-                title:(NSString *)title
-              message:(NSString *)message
-destructiveButtonTitle:(NSString *)destructiveTitle
-    cancelButtonTitle:(NSString *)cancelTitle
-    otherButtonTitles:(NSArray<NSString *> *)otherTitles
-  buttonTappedHandler:(AlertButtonTappedBlock)block {
-    
-    [self showWithStyle:style forViewController:viewController sourceRect:CGRectNull title:title message:message destructiveButtonTitle:destructiveTitle cancelButtonTitle:cancelTitle otherButtonTitles:otherTitles buttonTappedHandler:block];
-}
-
-
-+ (void)showWithStyle:(UIAlertControllerStyle)style
-    forViewController:(UIViewController *)viewController
            sourceRect:(CGRect)rect
                 title:(NSString *)title
               message:(NSString *)message

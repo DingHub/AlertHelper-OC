@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "AlertHelper.h"
+#import "UIViewController+BlockAlert.h"
 
 @interface ViewController ()
 
@@ -25,26 +25,26 @@
 
 - (IBAction)showAlertView:(id)sender {
     
-    [AlertHelper showAlertViewForViewController:self
-                                            title:@"Title"
-                                          message:@"Message"
-                           destructiveButtonTitle:@"destructive"
-                                cancelButtonTitle:@"cancel"
-                                otherButtonTitles:@[@"boy",@"girl"]
-                              buttonTappedHandler:^(NSInteger buttonIndex) {
-                                  NSLog(@"%zd", buttonIndex);
-                              }];
+    [self showAlertViewWithTitle:@"Title"
+                         message:@"Message"
+          destructiveButtonTitle:@"destructive"
+               cancelButtonTitle:@"cancel"
+               otherButtonTitles:@[@"boy",@"girl"]
+             buttonTappedHandler:^(NSInteger buttonIndex) {
+                 NSLog(@"%zd", buttonIndex);
+             }];
 }
+
 - (IBAction)showActionSheet:(id)sender {
     
-    [AlertHelper showActionSheetForViewController:self
-                                            title:@"Title"
-                                          message:@"Message"
-                           destructiveButtonTitle:@"destructive"
-                                cancelButtonTitle:@"cancel"
-                                otherButtonTitles:@[@"boy",@"girl"]
-                              buttonTappedHandler:^(NSInteger buttonIndex) {
-                                  NSLog(@"%zd", buttonIndex);
-                              }];
+    [self showActionSheetWithTitle:@"Title"
+                           message:@"Message"
+            destructiveButtonTitle:@"destructive"
+                 cancelButtonTitle:@"cancel"
+                 otherButtonTitles:@[@"boy",@"girl"]
+               buttonTappedHandler:^(NSInteger buttonIndex) {
+                   NSLog(@"%zd", buttonIndex);
+               }];
 }
+
 @end
