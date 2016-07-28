@@ -35,28 +35,34 @@ destructiveButtonTitle:(NSString *)destructiveTitle
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:style];
     if (destructiveTitle) {
         UIAlertAction *action = [UIAlertAction actionWithTitle:destructiveTitle style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-            block(0);
+            if (block) {
+                block(0);
+            }
         }];
         [controller addAction:action];
     }
     if (cancelTitle) {
         UIAlertAction *action = [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            block(destructiveTitle ? 1 : 0);
+            if (block) {
+                block(destructiveTitle ? 1 : 0);
+            }
         }];
         [controller addAction:action];
     }
     
     [otherTitles enumerateObjectsUsingBlock:^(NSString * title, NSUInteger i, BOOL * _Nonnull stop) {
         UIAlertAction *action = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            NSInteger index = 0;
-            if (cancelTitle == nil && destructiveTitle == nil) {
-                index = i;
-            } else if (cancelTitle && destructiveTitle){
-                index = i + 2;
-            } else {
-                index = i + 1;
+            if (block) {
+                NSInteger index = 0;
+                if (cancelTitle == nil && destructiveTitle == nil) {
+                    index = i;
+                } else if (cancelTitle && destructiveTitle){
+                    index = i + 2;
+                } else {
+                    index = i + 1;
+                }
+                block(index);
             }
-            block(index);
         }];
         [controller addAction:action];
     }];
