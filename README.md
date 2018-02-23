@@ -11,7 +11,7 @@ usage
 ```
 #import "UIViewController+BlockAlert.h"
 ```
-```
+```objective-c
 - (IBAction)showAlertView:(id)sender {
     
     [self showAlertViewWithTitle:@"Title"
